@@ -9,6 +9,17 @@ class InicioController extends Controller
      */
     public function index()
     {
-        return view('inicio');
+        $empresa = "TechStore";
+        $eslogan = "Tecnología para todos";
+        $mensaje = "Bienvenido a nuestro catálogo de productos tecnológicos.";
+
+        return view(
+            'inicio',
+            compact(
+                'empresa',
+                'eslogan',
+                'mensaje'
+            )
+        );
     }
 }
