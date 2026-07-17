@@ -24,8 +24,8 @@
         <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
             <div>
-
-                <h1 class="text-3xl font-bold">
+              
+               <h1 class="text-3xl font-bold">
                     TechStoreLaravel
                 </h1>
 
@@ -39,36 +39,36 @@
 
                 @if (Route::has('login'))
 
-                    @auth
+                @auth
 
-                        <a href="{{ route('dashboard') }}"
-                            class="bg-white text-blue-700 px-4 py-2 rounded-md font-semibold">
+                <a href="{{ route('dashboard') }}"
+                    class="bg-white text-blue-700 px-4 py-2 rounded-md font-semibold">
 
-                            Ir al Panel
+                    Ir al Panel
 
-                        </a>
+                </a>
 
-                    @else
+                @else
 
-                        <a href="{{ route('login') }}"
-                            class="border border-white px-4 py-2 rounded-md hover:bg-white hover:text-blue-700">
+                <a href="{{ route('login') }}"
+                    class="border border-white px-4 py-2 rounded-md hover:bg-white hover:text-blue-700">
 
-                            Iniciar sesión
+                    Iniciar sesión
 
-                        </a>
+                </a>
 
-                        @if(Route::has('register'))
+                @if(Route::has('register'))
 
-                            <a href="{{ route('register') }}"
-                                class="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold">
+                <a href="{{ route('register') }}"
+                    class="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold">
 
-                                Registrarse
+                    Registrarse
 
-                            </a>
+                </a>
 
-                        @endif
+                @endif
 
-                    @endauth
+                @endauth
 
                 @endif
 
@@ -180,21 +180,21 @@
 
         @guest
 
-            <a href="{{ route('login') }}"
-                class="bg-blue-700 text-white px-6 py-3 rounded-md">
+        <a href="{{ route('login') }}"
+            class="bg-blue-700 text-white px-6 py-3 rounded-md">
 
-                Acceder al sistema
+            Acceder al sistema
 
-            </a>
+        </a>
 
         @else
 
-            <a href="{{ route('dashboard') }}"
-                class="bg-green-600 text-white px-6 py-3 rounded-md">
+        <a href="{{ route('dashboard') }}"
+            class="bg-green-600 text-white px-6 py-3 rounded-md">
 
-                Ir al Panel Administrativo
+            Ir al Panel Administrativo
 
-            </a>
+        </a>
 
         @endguest
 
